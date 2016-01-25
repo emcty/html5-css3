@@ -1,0 +1,76 @@
+<!Doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>transation test</title>
+</head>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+section{display: flex;width:1200px;margin:0 auto;clear:both;}
+figure{float: left;flex:1;position: relative;}
+figure img{width:300px;height: 300px;}
+figure figcaption{position: absolute;top:20px;left:50px;color:#fff;font-size: 18px;}
+figure p{position: absolute;color:red;}
+.f1 p:nth-of-type(1){ 
+	top:60px;
+	left:50px;
+}
+.f1 p:nth-of-type(2){ 
+	top:100px;
+	left:50px;
+}
+.f1 figcaption,.f1 p{
+	transform:translate(-200px,0);
+}
+.f1:hover figcaption,.f1:hover p{ 
+	transform:translate(0,0);
+}
+.f1 img:hover,.f2 img:hover,.f3 img:hover{ 
+	opacity: .8;
+}
+.f1 figcaption{ 
+	transition:all .03s;
+}
+.f1 p{ 
+	transition:all .03s ease .2s;
+}
+.f2 figcaption:first-child{ 
+	transition:all,.005s;
+	top:20%;
+	left:10%;
+	transform:translate(-2000px);
+}
+.f2 figcaption:last-child { 
+	transition:all,.005s .1s;
+	top:30%;
+	left:10%;
+	transform:translate(-2000px);
+}
+.f2:hover figcaption:first-child { 
+	transform:skew(30deg,30deg) scale(2,2) translate(0px,0);
+}
+.f2:hover figcaption:last-child { 
+	transform:skew(30deg,30deg) scale(2,2) translate(30px,30px);
+}
+
+</style>
+<body>
+<section>
+	<figure class="f1">
+		<img src="img/1.jpg">
+		<figcaption>凤凰传奇棒棒哒</figcaption>
+		<p>在我的心上</p>
+		<p>自由的飞翔</p>		
+	</figure>
+ 	<figure class="f2">
+		<img src="img/2.jpg">
+		<figcaption>凤凰传奇</figcaption>	
+		<!-- <figcaption>玲花呀玲花</figcaption> -->	
+	</figure>
+</section>
+</body>
+</html>
