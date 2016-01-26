@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../public/stylesheets/weiui.css">
+    <style>
+        .spacing.bd{
+            padding: 0 15px;
+        }
+        .mt15{
+            margin-top:15px;
+        }
+        .avatar{
+            border-radius:1000px;
+            width:160px;
+            height:160px;
+            overflow:hidden;
+            margin:0 auto;
+            margin-top:30px;
+        }
+        .avatar img{
+            width:160px;
+            height:160px;
+        }
+        .toast_succ,.weui_loading_toast{
+            display:none;
+        }
+
+    </style>
+    <title></title>
+</head>
+<body>
+
+<!--头像，名字，职位，性别，工号，手机号，邮箱-->
+<div id="target" class="bd spacing"></div>
+<div id="loadingToast" class="weui_loading_toast">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <div class="weui_loading">
+            <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">请稍等...</p>
+    </div>
+</div>
+
+<div id="toast" class="toast_succ">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">关注成功</p>
+    </div>
+</div>
+
+</body>
+<script src="../../public/lib/zepto/zepto.min.js"></script>
+<script src="../../public/lib/lodash/lodash.min.js"></script>
+<script id="mydom" type="text/template">
+    <div class="avatar">
+        <img src="<%= avatar%>" alt="">
+    </div>
+    <div class="weui_cells">
+        <p>名字: <%= name %></p>
+        <p>性别: <%if(gender == 1){%> 男 <%}else{%> 女<%}%></p>
+        <p>微信ID: <%= weixinid %></p>
+        <p>用户ID: <%= userid %></p>
+    </div>
+    <%if(errcode === 0){%>
+    <a href="javascript:;" class="weui_btn weui_btn_primary mt15 weui_btn_disabled">您已经关注过了</a>
+    <%}else{%>
+    <a href="javascript:;" class="weui_btn weui_btn_primary mt15 btn_guanzhu" data-url="<%= url%>">关注验证</a>
+    <%}%>
+</script>
+
+<script>
+    (function(){
+        var dom = $("#mydom").html();
+        var _this = {
+            init:function(args){
+                this.args = args;
+                this.api = this.args.api;
+                this.tpldom = _.template(dom);
+                this.$wrap = $('#target');
+                this.$toast = $('.toast_succ');
+                this.$loading = $(".weui_loading_toast");
+                this.user_id = "";
+                this.build();
+            },
+            bind:function(){
+                this.$wrap.on("click",".btn_guanzhu",this.sendUserId.bind(this));
+            },
+            build:function(){
+                this.getUserInfo().done(function(res){
+                    this.renderjUi(res);
+                    this.bind();
+                }.bind(this));
+            },
+            getQueryString:function(name){
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null)return  unescape(r[2]); return null;
+            }
+        }
+        $.extend(_this,{
+            getUserInfo:function(){
+                return $.ajax({
+                    url:this.api.user_info,
+                    type:"get",
+                    dataType:"json",
+                    data:{
+                        code:_this.getQueryString("code")
+                    }
+                })
+            },
+            renderjUi:function(res){
+                this.user_id = res.userid;
+                this.$wrap.html(this.tpldom(res));
+            },
+            sendUserId:function(){
+                _this.$loading.show();
+                $.ajax({
+                    url:this.api.sure+"?sure="+$('.btn_guanzhu').data("url"),
+                    type:"get"
+                }).done(function(res){
+                    _this.$loading.hide();
+                    if(res.status == "0"){
+                        _this.$toast.show();
+                        setTimeout(function(){
+                            WeixinJSBridge.call('closeWindow');
+                        },3000)
+                        return;
+                    }
+                    alert("关注失败")
+                })
+
+            }
+        })
+
+        _this.init({
+            api:{
+                user_info:"http://127.0.0.1:3000/api/userinfo",
+                sure:"http://127.0.0.1:3000/asdfasdf"
+            }
+        })
+
+    })()
+</script>
+</html>

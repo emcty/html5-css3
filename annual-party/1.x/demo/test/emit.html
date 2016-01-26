@@ -1,0 +1,59 @@
+<html>
+<head>
+
+
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <meta charset="utf-8">
+  <script src="../../lib/jquery/jquery-1.8.0.min.js"></script>
+
+  <link rel="stylesheet" href="../../css/emit.css">
+  <link rel="stylesheet" href="../../css/weiui.css">
+  <script src="../../js/emit.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="hd">
+  <h1 class="page_title">发射测试页</h1>
+</div>
+<div class="weui_btn_area">
+<div class="weui_cells weui_cells_form">
+  <div class="weui_cell">
+    <div class="weui_cell_bd weui_cell_primary">
+      <textarea class="weui_textarea" placeholder="请说点什么吧..." rows="3"></textarea>
+      <div class="weui_textarea_counter"><span>0</span>/200</div>
+    </div>
+  </div>
+</div>
+  </div>
+<div class="weui_btn_area">
+  <a href="javascript:;" class="weui_btn weui_btn_primary">右弹幕</a>
+  <a href="javascript:;" class="weui_btn weui_btn_default">左弹幕</a>
+  <a href="javascript:;" class="weui_btn weui_btn_default">底弹幕</a>
+  <a href="javascript:;" id="testsign" class="weui_btn weui_btn_default">签到一名</a>
+  <a href="javascript:;" id="testsignxx" class="weui_btn weui_btn_default">签到好多次</a>
+  <a href="javascript:;" class="weui_btn weui_btn_default" id="showActionSheet">按钮</a>
+</div>
+
+
+
+<div id="actionSheet_wrap" style="display:none">
+  <div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>
+  <div class="weui_actionsheet weui_actionsheet_toggle" id="weui_actionsheet">
+    <div class="weui_actionsheet_menu">
+      <div class="weui_actionsheet_cell">示例菜单</div>
+      <div class="weui_actionsheet_cell">示例菜单</div>
+      <div class="weui_actionsheet_cell">示例菜单</div>
+      <div class="weui_actionsheet_cell">示例菜单</div>
+    </div>
+    <div class="weui_actionsheet_action">
+      <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+    </div>
+  </div>
+</div>
+
+
+</body>

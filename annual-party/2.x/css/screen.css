@@ -1,0 +1,15 @@
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td {
+    margin: 0;
+    margin:0;
+    padding: 0
+}
+#my-comment-stage{
+    position:relative;
+    width:1024px;
+    height:768px;
+    background:url("../images/danmu/bg_danmu.jpg");
+    margin:0 auto;
+}
+.cmt{
+    position:absolute;
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>koolearn.com</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="../../css/lucky/lucky.css">
+
+<div class="prog">
+    <div class="prog-bar">
+        <p class="prog-vader"></p>
+        <p class="prog-text">加载中 <span>0%</span></p>
+    </div>
+</div>
+
+<div class="container">
+
+</div>
+
+<link rel="stylesheet" href="../../lib/animate/animate.min.css">
+<script src="../../lib/jquery/jquery-2.1.3.min.js"></script>
+<script src="../../lib/lodash/lodash.min.js"></script>
+<script src="../../js/lucky/js/resLoader.js"></script>
+<script src="../../js/lucky/lucky_core.js"></script>
+
+<script id="template" type="text/html">
+    <div class="pages">
+        <section class="page block" style="background-image:url('<%=cover %>')">
+            <a href="javascript:;" class="btn start"></a>
+        </section>
+        <section class="page" style="background-image:url('<%=index %>')">
+            <a href="javascript:;" class="btn btn-lucky first" data-type="first"></a>
+            <a href="javascript:;" class="btn btn-lucky second" data-type="second"></a>
+            <a href="javascript:;" class="btn btn-lucky third" data-type="third"></a>
+            <a href="javascript:;" class="btn btn-lucky fourth" data-type="fourth"></a>
+            <a href="javascript:;" class="btn btn-lucky fifth" data-type="fifth"></a>
+            <a href="javascript:;" class="btn btn-lucky prtp" data-type="prtp"></a>
+            <a href="javascript:;" class="btn btn-lucky addnew" data-type="addnew"></a>
+        </section>
+        <section class="page" style="background-image:url('<%=stage %>')">
+            <div class="lucky-list">
+
+            </div>
+            <a href="javascript:;" class="btn back"></a>
+        </section>
+    </div>
+</script>
+
+<script id="template-panel" type="text/html">
+    <%
+        var big = "";
+        var width = "100%";
+        var br = 4;
+        if(count === 1){
+            big = "big";
+        }else if(count === 5) {
+            br = 2;
+        }
+    %>
+    <div style="width:<%= width %>">
+        <%
+            for( var i = 0 ; i < count ; i ++ ){
+            var dombr = i === br ? "<br />" : "";
+        %>
+            <div class="pannel <%=big%>">
+                <div class="inner animated">
+                    <p class="wz <%=boardSize %>">123</p>
+                </div>
+            </div>
+            <%=dombr %>
+        <%
+            }
+        %>
+    </div>
+</script>
+<script type="text/javascript">
+    window.lucky({
+        /**
+         * 需要预加载的图片链接 最好是绝对地址
+         */
+        imgs:{
+            cover:"../../images/lucky/cover.jpg",
+            index:"../../images/lucky/index.jpg",
+            stage:"../../images/lucky/stage.jpg"
+        },
+        api:"/project/annual-party/json/lucky.php"
+    })
+</script>
+
+</body>
+</html>
