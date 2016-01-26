@@ -1,0 +1,204 @@
+/* @grunt-build */
+*{margin:0;padding:0;}
+body{font-family: "微软雅黑";background: #ebf3ff;}
+.fc:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.fc{display:inline-block;*zoom:1;}
+.f24{font-size: 24px;}
+.f36{font-size: 36px;}
+a{text-decoration: none;  color: #646464;}
+.tac{text-align: center;}
+.fl{float: left;}
+.fr{float: right;}
+button{ 
+	outline: medium;
+	width:75px;
+}
+/*首页*/
+.container{ 
+	width: 1200px;
+	margin:0 auto;	
+	height: 722px;
+	margin-top: 42px;
+}
+.left{ 
+	width: 230px;
+	height: 720px;
+	float: left;
+	background: #fff;
+	border:1px solid #d1e4ff;
+	overflow: auto;
+}
+.container ul{
+list-style: none; 
+font-size: 14px;
+}
+.one{
+	border-bottom: 1px solid #d1e4ff; 
+}
+.left::-webkit-scrollbar{ 
+	width: 5px;
+	height: 5px;	
+	background: #f0f6ff;
+}
+.left::-webkit-scrollbar-track-piece{ 
+	 -webkit-border-radius:4px; 
+}
+.left::-webkit-scrollbar-thumb{ 
+	background: #88acdc;
+	border-radius:4px;
+	width: 20px;
+	height: 20px;
+}
+.p1{ 
+	padding: 0 14px 0 16px;
+	height: 40px;
+	line-height: 40px; 
+	display: inline-block;
+	width: 200px;
+	color:#646464;	
+}
+.p-border{ 
+	border-bottom: 1px solid #d1e4ff;
+}
+.left p span.blue,.find a.blue{ 
+	color: #5f87bd;
+}
+.onea{ 
+  background: url("../../images/z_03.jpg") no-repeat;
+  background-origin: content-box;
+  width: 17px;
+  display: inline-block;
+  height: 17px;
+  float: right;
+  margin-top: 8px;
+}
+.onea2{ 	
+	background: url("../../images/z_06.jpg") no-repeat right center;
+	background-origin: content-box;
+}
+.two li p a.onea2{ 
+	background: url("../../images/z_12.jpg") no-repeat right center;
+	 margin-right: 5px;
+}
+.one ul.two{ 
+	  padding: 2px 14px 0px 16px;
+}
+.one ul.two li{ 
+	line-height: 30px;
+	border-left: 1px solid #e8e8e8;
+    white-space: nowrap;
+}
+.two li p a{ 
+	background: url("../../images/z_09.jpg") no-repeat 2px center;
+	padding-left: 16px;
+}
+.bg{ 
+    background: url("../../images/z_15.jpg") no-repeat 5px  center;
+	padding-left: 15px;
+}
+.one span{ 
+	cursor: pointer;
+}
+/*右边*/
+.right{ 
+	float: right;
+	width: 950px;	
+}
+.right .t{ 
+	height: 43px;	
+}
+.right input{ 
+	border:1px solid #d1e4ff;
+	background: #fff;
+	padding-left: 26px;
+	height: 41px;
+	line-height: 41px;
+	 width: 846px;
+}
+.right img{ 
+	  vertical-align: middle;
+	  border:1px solid #d1e4ff;
+	  border-left:0;
+}
+button{border:none;cursor: pointer;}
+.right .b{ 
+	margin-top: 16px;
+	border:1px solid #d1e4ff;
+	height: 661px;
+	background: #fff;
+	position: relative;
+}
+.page{ 
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+	right: 50px;
+	color: #7b9ece;font-size: 12px;
+}
+.right .find p{ 
+	text-align: left;
+	line-height: 30px;
+	padding: 20px 10px 20px 50px;
+}
+.right .find p a{ 
+  cursor: pointer;
+  padding: 0 10px 0 0;
+  display: inline-block;
+  width: 160px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.right .find a:hover{
+	text-decoration: underline;
+	color: #5f87bd; 
+}
+.right .find .page a{display: inline-block;color: #7b9ece;font-size: 12px;padding:0 4px;}
+.right .find .page a:hover{text-decoration: none;}
+.right .find .page a.selected{background: #7b9ece;color: #fff;}
+.right .b p{text-align: left;}
+.right .b .fail{padding-top: 200px;}
+.right .b div p{padding-top:10px;}
+.right .b img{border:none;}
+.right .find .page a.cur{background: #7b9ece;color: #fff;}
+.w1200{ 
+	width: 1200px;
+	margin:0 auto;
+}
+p.text{ 
+	color: #5f87bd;
+	padding:24px 0 12px 0;
+}
+.show_knowledge{ 
+  border: 1px solid #d1e4ff;
+  padding: 20px 40px;
+  width: 1118px;
+  background: #fff;
+  line-height: 30px;
+}
+.show_knowledge span {
+  background: none;
+  padding: 0;
+  padding-right: 10px;
+  font-size: 18px;
+  color: #646464;
+}
+.show_knowledge span a { 
+ cursor: pointer;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: url("../../images/j_07.jpg") no-repeat 0px center;
+  margin-left: 3px;
+}
+button.sure{ 
+	width: 178px;
+	height: 44px;
+	line-height: 44px;
+	margin:20px 500px;
+	border-radius: 18px;
+	background: #ff4b4b;
+	color: #fff;
+	font-size: 20px;
+}

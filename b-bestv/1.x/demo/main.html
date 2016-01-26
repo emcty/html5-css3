@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<base target="_blank"></base>
+<link rel="stylesheet" href="http://login.koolearn.com/sso/css/shark/login-register.css"/>
+<link rel="stylesheet" href="../css/main/page.css"/>
+<!-- 公共部分开始 -->
+<script type="text/javascript" src="./../js/global.js"></script>
+<title>百视通用户服务专区_新东方在线</title>
+<script type="text/javascript">
+  seajs.config({
+  	comboExcludes: function(uri) {
+      return true
+    }
+  });
+</script>
+<!-- 公共部分结束 -->
+<script type="text/javascript">
+   //var islogin=false;
+	seajs.use(['../js/public.js'],function(){		
+	});
+</script>
+</head>
+<body>
+<div class="banner">
+	<div class="w1200">
+		<p class="f24 p1">电视端用户增值服务</p>
+		<a href="javascript:void(0);" class="a1" target="_self">马上开启服务之旅</a>
+		<a href="javascript:void(0);" target="_self" class="a2"></a>
+		<div class="text tac">					
+			<p class="f36">"服务专区是百视通订购用户服务的延伸，弥补了电视教育只提供视频<br>观看这一个环节的缺陷，完成了教学的闭环！"</p>
+		</div>
+	</div>
+</div>
+<div class="third_block">
+	<div class="th w1200">
+		<ul class="fc">
+			<li>
+				<img src="../images/s_04.jpg" width="216px" height="226px">
+				<p>在线提问新东方在线名师免费答疑</p>
+			</li>
+			<li>
+				<img src="../images/s_06.jpg" width="216px" height="226px">
+				<p>在线提问新东方在线名师免费答疑</p>
+			</li>
+			<li>
+				<img src="../images/s_08.jpg" width="216px" height="226px">
+				<p>在线提问新东方在线名师免费答疑</p>
+			</li>
+		</ul>
+	</div>
+	<a name="last"></a>
+	<div class="detail w1200"  id="last">
+		<ul class="fl">
+			<li class="fc">
+				<div class="fl"><a href="http://www.baidu.com/" target="_self"><img src="../images/s_14.jpg"></a></div>
+				<div class="fl js">
+					<p class="f28">知识堂答疑</p>
+					<p>问答动态、活动动态、话题排行</p>
+				</div>
+			</li>
+			<li class="fc">
+				<div class="fl"><a href="http://www.baidu.com/" target="_self"><img src="../images/s_21.jpg"></a></div>
+				<div class="fl js">
+					<p class="f28">在线测评</p>
+					<p>千余套试卷   在线作答   报告解析</p>
+				</div>
+			</li>
+		</ul>
+		<ul class="fl ml40">
+			<li class="fc">
+				<div class="fl"><a href="http://www.baidu.com/" target="_self"><img src="../images/s_17.jpg"></a></div>
+				<div class="fl js">
+					<p class="f28">云题库</p>
+					<p>30W道海量试题   覆盖K12</p>
+				</div>
+			</li>
+			<li class="fc">
+				<div class="fl"><a href="#" target="_self"><img src="../images/s_19.jpg"></a></div>
+				<div class="fl js">
+					<p class="f28">学习计划</p>
+					<p>K12全阶段   学习计划</p>
+				</div>
+			</li>
+		</ul>
+		<div class="icon"><img src="../images/s_03.jpg"></div>
+	</div>
+</div>
+<!--登录窗口start-->
+<div class="fixed">
+<form action="www.baidu.com" target="_self">
+  <div class="dialog-login">
+		<div class="dialog-login-content">
+			<div class="p-tabs-nav">				
+				<p id="login_tab" class="selected">登录<i></i></p>				
+			</div>
+			<div class="p-tabs-content-wrap">
+				<!-- 登陆部分开始 -->
+				<div id="login_div" class="p-tabs-content p-login selected">						
+					<div class="p-for-placeholder"><input id="userName" type="text" name="userName" value="用户名" class="p-phone"><p>用户名输入有误！</p></div>
+					<div class="p-for-placeholder">					
+					<input id="password" type="password" name="password" value="" class="p-passworld">
+					<input id="password2" type="text" value="密码" class="p-passworld">
+					<p>密码输入有误!</p>
+					</div>						
+					<button type="button" onclick="login();" class="i-btn i-btn-default i-btn-lg i-btn-block">登录</button>		
+				</div>						
+			</div>
+		</div>
+		<div i="close" class="ui-dialog-close" title="取消">×</div>
+  </div>
+</form>
+</div>
+<!--登录窗口end-->
+<div class="push" style="display:none;"></div>
+<!--#include virtual="./foot.html"-->
+<script type="text/javascript">
+	function login(){ 
+		$("form").submit();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--#set var="dest" value=""-->
+    <!--#include virtual="/framework/global.html"-->
+    <link rel="stylesheet" href="<!--#echo var='dest'-->/project/path/to/css.css"/>
+    <script type="text/javascript">
+        seajs.config({
+            alias:{
+                'project/path/to/module': 'project/path/to/module.js'
+            }
+        });
+        seajs.use(['project/path/to/module']);
+    </script>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>

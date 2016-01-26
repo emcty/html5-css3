@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<base target="_blank"></base>
+<!-- 公共部分开始 -->
+<script type="text/javascript" src="./../js/global.js"></script>
+<script type="text/javascript">
+  seajs.config({
+  	comboExcludes: function(uri) {
+      return true
+    }
+  });
+</script>
+<!-- 公共部分结束 -->
+<link rel="stylesheet" href="/project/b-bestv/1.x/css/tiku/page.css"/>
+<title>百视通用户在线练习题_新东方在线</title>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<!--#include virtual="./public.html"-->
+ 	<div class="container">
+ 		<form action="http://www.baidu.com/"> 		
+ 			<p id="p_grade"><label>学段</label> 
+ 				<input type="hidden" id="grade" name="grade" value="" />
+ 				<span nj="xx">小学</span><span nj="cz">初中</span><span nj="gz">高中</span>			
+ 			</p>
+ 			<p id="p_nianji">
+ 				<input type="hidden" id="nianji" name="nianji" value="" />
+	 			<label>年级</label> 
+	 			<span nj="1">一年级</span>
+	 			<span nj="2">二年级</span>
+	 			<span nj="3">三年级</span>			
+ 			</p>
+ 			<p><label>知识点</label>
+	 			<a class="btn" href="zhishi.html">选择知识点</a>			
+ 			</p>
+ 			<p id="add" class="add">
+ 				<span>有理数<a></a></span><span>有理数有理数有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span><span>有理数<a></a></span> 			
+ 			</p>
+ 			<p id="qcount"><label>题目数</label><input type="text" value="" maxlength="4" /></p>
+ 			<p><button>开始练习</button></p>
+ 		</form>
+ 	</div>
+</body>
+</html>

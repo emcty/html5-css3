@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学习资源预览</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="http://img.koolearn.com/v2/js/jquery-1.8.2.min.js"></script>
+
+<script type="text/javascript" src="/project/b-bestv/1.x/js/reader/pc_read.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#pcPageNumber").keyup(function(e){alert(777); if(e.keyCode == 13) $(".pagebtn1").trigger('click');})
+	});
+</script>
+
+</head>
+
+<body>
+<div class="content">
+	<h2 class="h2_tit">学习资源预览</h2>
+	<div class="wrap">
+		<div class="tab_1 tab_det">
+			<form action="" method="post">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="td_name">资源名称</td>
+						<td>学习材料.ppt</td>
+						<td class="td_name">资源编码</td>
+						<td>st2102516415</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="pvw" style="height: 300px;">
+			
+				<div style="margin:0 auto;">
+					<div id="documentViewer" class="flexpaper_viewer" style="height:500px;"></div>
+				</div>
+
+				<div class='flexpaper_bottom tac' style="display:none;">
+					<div class="page_bottom fc">
+						<a class="pdfarrow pdfarrowl mt8 fl" href="javascript:;" target="_self" onclick='$FlexPaper("documentViewer").prevPage();pageNum(500);'></a>
+						<input id="PageNumberx" class="w32 colgreen tac mt6 fl flexpaper_txtPageNumber" name="" type="text" value="1">
+						<strong id="pagenumx" class='pagenum mt6 fl flexpaper_tblabel'> / </strong>
+						<a class="pdfarrow pdfarrowr mt8 fl" href="javascript:;" target="_self" onclick='$FlexPaper("documentViewer").nextPage();pageNum(500);'></a>
+					</div>
+				</div>
+
+				<div class="subarrow subarrowbg1">
+					<a class="subarrowt" href="javascript:;" target="_self" onclick='$FlexPaper("documentViewer").prevPage();pageNum(500);'></a>
+				    <div class="subline"></div>
+				    <span><em class="subnum">1</em><strong class="suballnum">/1</strong></span>
+				    <div class="subline"></div>
+				    <a class="subarrowb" href="javascript:;" target="_self" onclick='$FlexPaper("documentViewer").nextPage();pageNum(500);'></a>
+				</div>
+                
+                <script type="text/javascript">
+					var startDocument = "Paper";
+					jQuery.get('/project/b-bestv/1.x/js/reader/pcreadUI.html',
+						function(toolbarData) {
+							mobile_Optimization.common.loadbefore();
+							$('#documentViewer').FlexPaperViewer(
+								{ config : {
+									//参数
+									IMGFiles: "/project/b-bestv/1.x/js/reader/45/index_{page}.png", 
+									JSONFile: "/project/b-bestv/1.x/js/reader/45/index.js",
+									PDFFile: "/project/b-bestv/1.x/js/reader/45/index.pdf",
+									
+									key:'@b186e9fe9ce4cabfda3$b3047f8e707bff557a8',
+									Scale : 1,
+									ZoomTransition : 'easeOut',
+									ZoomTime : 0.5,
+									ZoomInterval : 0.1,
+									FitPageOnLoad: false,
+									FitWidthOnLoad: false,
+									FullScreenAsMaxWindow: true,
+									ProgressiveLoading: true,
+									MinZoomSize : 0.2,
+									MaxZoomSize : 5,
+									SearchMatchAll : false,
+									Toolbar : toolbarData,
+									InitViewMode : 'Portrait',
+									RenderingOrder : 'html,flash',
+									StartAtPage : '',
+									ViewModeToolsVisible : true,
+									ZoomToolsVisible : true,
+									NavToolsVisible : true,
+									CursorToolsVisible : true,
+									SearchToolsVisible : true,
+									WMode : 'window'
+									//localeChain: 'en_US'
+								}}
+							);
+							mobile_Optimization.common.copy($('#documentViewer'));
+					});
+				</script>
+                
+		</div>
+	</div>
+</div>
+</body>
+</html>

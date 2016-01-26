@@ -1,0 +1,72 @@
+/* @grunt-build */
+*{margin:0;padding:0;}
+body{font-family: "Î¢ÈíÑÅºÚ";background: #ebf3ff;}
+.fc:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.fc{display:inline-block;*zoom:1;}
+.f24{font-size: 24px;}
+.f36{font-size: 36px;}
+.tac{text-align: center;}
+.fl{float: left;}
+.fr{float: right;}
+ul{list-style: none;}
+/*Ê×Ò³*/
+.container{ 	
+	padding:48px 0 80px 0;
+}
+.w1200{ 
+	width: 1200px;
+	margin:0 auto;
+}
+.tab{ 
+	border-top:1px solid #d1e4ff;	
+	 height: 700px;
+}
+.tabhead{ 	
+	width: 126px;	
+	background: #daeaff;
+}
+p.p1{font-size: 24px;line-height: 40px;color: #646464;padding-bottom: 20px;}
+.tabhead ul li{ 
+	line-height: 80px;
+	height: 80px;
+	font-size: 24px;
+	color: #7ba4db;
+	text-align: center;
+	border-bottom:1px solid #c3dcff;
+	cursor: pointer;
+}
+.tabhead ul li.add{ 
+	background: #fff;
+	border-left:3px solid #7b9ece;
+}
+.tabody{ 
+  width: 1000px;
+  background: #fff;
+  padding: 10px 36px;
+  padding-bottom: 28px;
+ 
+}
+.tabody .t{ 
+	height: 54px;
+	padding-top: 15px;
+	  text-align: center;
+	  border-bottom: 1px solid #d1e4ff;	
+}
+.tabody .t a{ 
+	display: inline-block;
+	width: 74px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+	background: #daeaff;
+	color: #5f87bd;
+	font-size: 14px;
+	margin-left: 30px;
+}
+.tabody .t a.add{ 
+	color:#fff;
+	background: #7b9ece;
+	text-decoration: none;
+}
+.tabody .t a:hover{text-decoration: none;}

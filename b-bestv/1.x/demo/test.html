@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<base target="_blank"></base>
+<!-- 公共部分开始 -->
+<script type="text/javascript" src="./../js/global.js"></script>
+<script type="text/javascript">
+  seajs.config({
+  	comboExcludes: function(uri) {
+      return true
+    }
+  });
+</script>
+<!-- 公共部分结束 -->
+<link rel="stylesheet" href="/project/b-bestv/1.x/css/test/page.css"/>
+<title>百视通用户在线测评_新东方在线</title>
+<script type="text/javascript">
+	seajs.use(['./../js/test/page.js'],function(app){
+		app._init();
+	});
+</script>
+</head>
+<body>
+	<!--#include virtual="./public.html"-->
+ 	<div class="container">
+ 		<form action="http://www.baidu.com/"> 
+ 			<p><label>地区</label>
+ 				<select id="area" name="area" value="">
+ 					<option value="beijing" selected>北京</option>
+ 					<option value="tianjing">天津</option>
+ 					<option value="shanghai">上海</option>
+ 				</select>
+ 			</p>
+ 			<p id="p_grade"><label>学段</label> 
+ 				<input type="hidden" id="grade" name="grade" value="" />
+ 				<span nj="xx">小学</span><span nj="cz">初中</span><span nj="gz">高中</span>			
+ 			</p>
+ 			<p id="p_nianji">
+ 				<input type="hidden" id="nianji" name="nianji" value="" />
+	 			<label>年级</label> 
+	 			<span nj="1">一年级</span>
+	 			<span nj="2">二年级</span>
+	 			<span nj="3">三年级</span>			
+ 			</p>
+ 			<p id="p_subject">
+ 				<input type="hidden" id="subject" name="subject" value="" /> 
+	 			<label>科目</label> 
+	 			<span nj="1">语文</span>
+	 			<span nj="2">数学</span>
+	 			<span nj="3">英语</span>			
+ 			</p>
+ 			<p><button form="value">开始测评</button></p>
+ 		</form>
+ 	</div>
+ 	<!--#include virtual="./foot.html"-->
+</body>
+</html>

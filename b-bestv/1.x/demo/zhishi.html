@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<base target="_blank"></base>
+<!-- 公共部分开始 -->
+<script type="text/javascript" src="./../js/global.js"></script>
+
+<script type="text/javascript">
+  seajs.config({
+  	comboExcludes: function(uri) {
+      return true
+    }
+  });
+</script>
+<!-- 公共部分结束 -->
+<link rel="stylesheet" href="/project/b-bestv/1.x/css/zhishi/page.css"/>
+<title>百视通用户选择知识点练习_新东方在线</title>
+<script type="text/javascript">
+	seajs.use(['./../js/zhishi/page.js','./../js/es5-shim.js'],function(init){
+		init({ 
+			url1:"../json/zhishi/zs.php",
+			url2:"../json/zhishi/zhishi.php"
+		});
+	});
+</script>
+</head>
+<body>
+	<!--#include virtual="./public.html"-->
+ 	<div class="container"> 
+ 		<div class="left">  						
+ 		</div>
+ 		<div class="right">
+ 			<form class="t" action="http://www.baidu.com/">
+ 				<input type="text"  value="知识点关键字" /><button><img src="../images/x_03.jpg"></button>
+ 			</form>
+ 			<!--搜索为空时显示-->
+ 			<div class="b" style="display:none;">
+ 				<div class="fail">
+	 				<p style="text-align:center;"><img src="../images/fail.jpg"></p>
+	 				<p style="text-align:center;">目前还没有找到关于"某某"的内容</p>
+ 				</div>
+ 			</div>
+ 			<!--有搜索结果时显示-->
+ 			<div class="find b">
+ 				<p><a value="26997">语言的积累与运用</a><a value="26998">汉字的注音与认读</a></p>
+ 				<div id="page" class="page"> 
+				<a href="javaScript:serachFenye(0)">首页</a> 
+				<a href="javaScript:serachFenye(5)">上一页</a> 
+				<a href="javaScript:serachFenye(5)">6</a> 
+				<a class="cur" href="javascript:;">7</a> 
+				<a href="javaScript:serachFenye(7)">8</a> 
+				<a href="javaScript:serachFenye(8)">9</a> 
+				<a href="javaScript:serachFenye(9)">10</a> 
+				<a href="javaScript:serachFenye(10)">11</a> 
+				<a href="javaScript:serachFenye(11)">12</a> 
+				<a href="javaScript:serachFenye(12)">13</a> 
+				<a href="javaScript:serachFenye(13)">14</a> 
+				<a href="javaScript:serachFenye(14)">15</a> 
+				<a href="javaScript:serachFenye(7)">下一页</a> 
+				<a href="javaScript:serachFenye(49)">尾页</a> 
+				<span>共50页</span>
+				</div> 
+			</div>
+ 			</div> 			
+ 		</div>
+ 	</div>
+ 	<div class="w1200">
+	 	<p class="text">已选择知识点</p>
+	 	<form>
+	 	<!--input接受的value值是一个数组-->
+	 	<input type="hidden" value="" class="select" />
+	 	<div class="show_knowledge">	 		 
+	 	</div>
+	 	<button class="sure">确认</button>
+	 	</form>
+ 	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<base target="_blank"></base>
+<link rel="stylesheet" href="/project/b-bestv/1.x/css/public.css"/>
+<!-- 公共部分开始 -->
+<script type="text/javascript" src="./../js/global.js"></script>
+<script type="text/javascript">
+  seajs.config({
+  	comboExcludes: function(uri) {
+      return true
+    }
+  });
+</script>
+<!-- 公共部分结束 -->
+<script type="text/javascript">
+	seajs.use(['./../js/public.js'],function(){		
+	});
+</script>
+<title></title>
+</head>
+<body>
+	<div class="h">
+		<div class="w1200">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<div class="tx">
+					<span>用户名</span>
+					<a href="javascript:void(0);">退出</a>					
+				</div>
+			</div>				
+		</div>		
+	</div>	
+</body>
+</html>
