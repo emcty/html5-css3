@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+	<title>响应式弹性布局</title>
+	<style type="text/css">
+		body{
+			padding:20px;
+			text-align:center;
+			font-family:"微软雅黑";
+			font-size:14px;
+		}
+		div{
+			box-sizing:border-box;
+		}
+		.container1{
+	  		display:flex;
+			background:red;
+			border:1px solid red;
+		}
+		.container1>.item1{
+			min-height:50px;
+			background:green;
+			border:1px solid #333;
+		}
+		.container1>.item2{
+			min-height:50px;
+			background:yellow;
+			border:1px solid #666;
+		}
+		.container1>.item3{
+			min-height:50px;
+			background:blue;
+			border:1px solid #999;
+		}
+		@media (min-width:801px) {
+			.container1{
+				flex-direction:row-reverse;
+				flex-wrap:wrap;
+			}
+			.container1>.item1{
+				width:100%;
+				/*flex:2;*/
+				order:1;
+			}
+			.container1>.item2{
+				width:50%;
+				/*flex:1;*/
+				order:2;
+			}
+			.container1>.item3{
+				width:50%;
+				/*flex:1;*/
+				order:3;
+			}
+		}
+		@media (max-width:800px) {
+		  	.container1{
+		  		flex-direction:row;
+			}
+			.container1>.item1{
+				width:50%;
+				order:2;
+			}
+			.container1>.item2{
+				width:50%;
+				order:3;
+			}
+			.container1>.item3{
+				width:100%;
+				order:1;
+			}
+		}
+		@media (max-width:600px) {
+		  	.container1{
+		  		flex-direction:column;
+			}
+			.container1>.item1{
+				width:100%;
+				order:1;
+			}
+			.container1>.item2{
+				width:100%;
+				order:2;
+			}
+			.container1>.item3{
+				width:100%;
+				order:3;
+			}
+		}
+
+		.container2{
+	  		display:flex;
+			background:red;
+			border:1px solid red;
+			flex-direction:row;
+			flex-wrap:wrap;
+		}
+		.container2>.item1{
+			min-height:50px;
+			background:blue;
+			border:1px solid #333;
+			width:100%;
+			order:1;
+		}
+		.container2>.item2{
+			min-height:50px;
+			background:green;
+			border:1px solid #666;
+			width:50%;
+			order:2;
+		}
+		.container2>.item3{
+			min-height:50px;
+			background:yellow;
+			border:1px solid #999;
+			width:50%;
+			order:3;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container1">
+	<div class="item1">元素1</div>
+	<div class="item2">元素2</div>
+	<div class="item3">
+		<div class="container2">
+			<div class="item1">元素3-1</div>
+			<div class="item2">元素3-2</div>
+			<div class="item3">元素3-3</div>
+		</div>
+	</div>
+</div>
+
+<div id="resizeInfo"></div>
+<script type="text/javascript">
+function showSize(){
+	var width=document.documentElement.clientWidth;
+	var height=document.documentElement.clientHeight;
+	document.getElementById('resizeInfo').innerHTML='页面大小：'+width+'-'+height;
+}
+window.onresize=showSize;
+showSize();
+</script>
+</body>
+</html>
