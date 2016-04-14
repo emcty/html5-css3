@@ -1,0 +1,90 @@
+.mt20{margin-top: 20px;}
+header
+{
+    display: block;
+
+    width: 1200px;
+    margin: 0 auto;
+}
+header p
+{
+    margin-top: 20px;
+}
+header p:nth-of-type(2)
+{
+    font-size: 20px;
+    line-height: 60px;
+
+    height: 60px;
+
+    text-indent: 60px;
+
+    color: #fff;
+    background: #547fb6;
+}
+.w1000
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+.login
+{
+    padding: 150px 0;
+}
+.login p
+{
+    font-size: 18px;
+
+    padding-top: 20px;
+
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.login p:last-child{ 
+	padding-top: 40px;
+}
+
+.login input
+{
+        width: 200px;
+    height: 30px;
+    margin-left: 16px;
+}
+.login p button{ 
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background: #547fb6;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 72px;
+}
+.hc-wkt li{ 
+	    width: 234px;
+}
+
+table.co-table thead{ 
+	background: #547fb6;
+	color:#fff;
+
+}
+table.co-table tbody{text-align: center;}
+table.co-table tbody tr td{ 
+	border:1px solid #ccc;
+	border-top:0;
+	border-right:0;
+}
+table.co-table tbody tr td:last-child{border-right: 1px solid #ccc;}
+.page{ 
+	text-align: center;
+	margin-top: 20px;
+}
+.page a{ 
+	display: inline-block;
+	padding:0 2px;
+	color:#333;
+	text-decoration: none;
+}
